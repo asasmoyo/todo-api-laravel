@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: php:7.4-apache
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+    volumes:
+      - .:/var/www/html
+      - ./apache-site.conf:/etc/apache2/sites-enabled/000-default.conf
+    ports:
+      - '8080:80'
