@@ -6,7 +6,7 @@
 
 1. Pre-download images
 
-    Buka terminal, lalu jalankan:
+    Jalankan program Docker terlebih dahulu lalu uka terminal dan jalankan:
 
     ```
     docker pull postgres:12
