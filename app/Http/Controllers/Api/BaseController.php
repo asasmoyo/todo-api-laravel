@@ -7,7 +7,7 @@ use Illuminate\Routing\Controller;
 class BaseController extends Controller {
     public function __construct() {
         $this->middleware(function ($request, $next) {
-            if ($request->wantsJson() && $request->acceptsJson()) {
+            if ($request->wantsJson()) {
                 return $next($request);
             }
             return response('', 400);
