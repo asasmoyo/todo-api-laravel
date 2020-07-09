@@ -29,6 +29,7 @@ class TodoController extends BaseController {
         ]);
         $todo = Todo::find($id);
         $todo->done = $payload['done'];
+        $todo->save();
         return new TodoResource($todo);
     }
 
